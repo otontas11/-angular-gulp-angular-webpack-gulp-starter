@@ -1,0 +1,14 @@
+$max-width: 1200px;
+$gutter30px: 30px; //grid ile arasındaki boşluk için verdiğimiz deger container gibi
+$column65px: 65px; //kolon uzunlugu
+$finger-size: 40px; //mobil bir uygulamada kullanıcının parmak alanına uygun yukseklik
+
+//font
+$font-family: "Open Sans", Arial, sans-serif;
+$font-family-playFair: "Playfair Display", serif;
+$font-family-dinNext: DinNextLtPro, serif;
+
+@font-face {
+  font-family: DinNextLtPro;
+  src: url(/font/din_next_lt_pro.ttf);
+}

@@ -1,0 +1,276 @@
+//her yere etki edebilecek kod parcacıklarının bulundugu kısım
+//ortak kullanım kodları değişim diğer kısımlarda yapılabilir.
+
+.ana-kapsul {
+  width: 1440px;
+
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  outline: none;
+}
+
+.Header {
+  height: 680px;
+}
+
+.Main {
+  background-color: white;
+  overflow: hidden;
+
+  height: auto;
+}
+
+.Footer {
+  height: 200px;
+}
+
+.container {
+  max-width: 1110px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+
+  fill: currentColor;
+}
+
+.kucuk-baslik {
+  height: 19px;
+  color: #3bb4c1;
+  font-family: DinNextLtPro;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: -0.38px;
+  line-height: 23px;
+  margin-bottom: 10px;
+}
+
+.buyuk-baslik {
+  height: 128px;
+  color: #4c5059;
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 64px;
+  margin-bottom: 20px;
+}
+
+.paragraf {
+  opacity: 0.8;
+  color: #4c5059;
+  font-family: DinNextLtPro;
+  font-size: 18px;
+  letter-spacing: -0.34px;
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+
+.fotograf {
+  border-radius: 10px;
+  display: block;
+  background: #3babf1;
+  height: 100%;
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.dosyalar-main {
+  height: 499px;
+  width: 1300px;
+  margin-bottom: 100px;
+}
+.lugatlar-main {
+  width: 100%;
+  background: rgba(246, 245, 245, 0.5);
+}
+
+.button-oval {
+  height: 44px;
+  width: 196px;
+  border-radius: 22px;
+  background-color: #3bb4c1;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  &:hover {
+    background-color: #13a9c1;
+    cursor: pointer;
+  }
+}
+
+.button-pdfwordpower {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 20px;
+  opacity: 0.8;
+  border-radius: 10.5px;
+  background-color: #000000;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+
+  padding-left: 10px;
+  padding-right: 10px;
+
+  color: #ffffff;
+  font-family: DinNextLtPro, serif;
+  font-size: 12px;
+  letter-spacing: -0.25px;
+  line-height: 14px;
+}
+
+.button-yuvarlak {
+  height: 44px;
+  width: 44px;
+  border: 2px solid #3bb4c1;
+  background-color: #ffffff;
+  border-radius: 50%;
+
+  &:hover {
+    background-color: #13a9c1;
+    cursor: pointer;
+  }
+}
+
+.fa-chevron-right {
+  height: 16px;
+  width: 16px;
+  background-color: #ff552b;
+}
+
+.kitap-taslak {
+  position: relative;
+  height: 350px;
+  width: 160px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.07);
+
+  margin-right: $gutter30px;
+
+  &-resim {
+    display: block;
+    height: 244.24px;
+    width: 160px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+    margin-bottom: 23.7px;
+  }
+}
+
+.kitap-baslik {
+  height: 42px;
+  width: 160px;
+  color: #4c5059;
+  font-family: Playfair Display, serif;
+  font-size: 16px;
+  line-height: 21px;
+
+  margin-bottom: 12.8px;
+}
+
+.download {
+  height: 15px;
+  cursor: pointer;
+  color: #3bb4c1;
+
+  &:hover {
+    color: #06727e;
+  }
+
+  img {
+    height: 17.45px;
+    width: 16px;
+    margin-right: 5px;
+  }
+}
+
+.dosyayi-indir {
+  height: 15px;
+  width: 75px;
+  opacity: 0.8;
+
+  font-family: DinNextLtPro, serif;
+  font-size: 14px;
+  letter-spacing: -0.29px;
+  line-height: 18px;
+}
+.dosya-detay-resim {
+  height: 163.18px;
+  width: 107px;
+  border-radius: 10px;
+  margin-top: $gutter30px;
+}
+
+//////////////////////////////////////@at-root
+
+.search-button {
+  float: right;
+}
+
+.search-button button {
+  border: none;
+
+  padding: 1.9em 20px;
+  color: white;
+}
+
+/*popup kısmı*/
+
+.modal {
+  display: none; /* Varsayılan olarak gizlidir */
+  position: fixed; /* Yerinde kal */
+  z-index: 1; /* Üstte */
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%; /* Ful Genişlik */
+  height: 100%; /* Ful Yükseklik */
+  overflow: auto; /* Gerekirse kaydırmayı etkinleştir */
+  background-color: rgb(0, 0, 0); /* Yedek renk */
+  background-color: rgba(0, 0, 0, 0.6); /* Siyah w / opaklık */
+}
+/* İçerik / Kutu */
+.modal-content {
+  background-color: #f7f7ef;
+  height: auto;
+  margin: 15% auto; /* % 15 üstten ve ortalanmış */
+  padding-left: 15px;
+  border: 1px solid #888;
+  width: fit-content;
+  border-radius: 10px;
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.2), 0 0 20px 0 rgba(0, 0, 0, 0.05);
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 32px;
+  padding-right: 5px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
